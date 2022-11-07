@@ -1,0 +1,36 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+class HelloWorld {
+    
+    public static void addEdge(LinkedList<Integer>[] arr, int u, int v1)
+    {
+        arr[u].add(v1);
+    }
+    
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+        int v = 3;
+         LinkedList<Integer>[] arr = new LinkedList[v];
+         
+         for(int i=0; i<v ; i++)
+         {
+             arr[i] = new LinkedList<Integer>();
+         }
+        
+        addEdge(arr,0,1);
+        addEdge(arr,0,2);
+        addEdge(arr,1,0);
+        addEdge(arr,2,0);
+      
+       for(int i=0 ; i< v; i++)
+       {
+           System.out.println("Node = " + i);
+           System.out.println(" -> = ");
+           for(Integer num: arr[i])
+           {
+              System.out.println(num); 
+           }
+       }
+    }
+}
